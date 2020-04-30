@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background Generator</title>
+    <style>
+        button{
+            width: 120px;
+            height: 40px;
+        }
+        #butl1{
+            color: white;
+            background-color: red;
+        }
+        #butl2{
+            color: white;
+            background-color: green;
+        }
+        #butl3{
+            color: white;
+            background-color: yellow;
+        }
+        #butm1{
+            color: white;
+            background-color: red;
+        }
+        #butm2{
+            color: white;
+            background-color: green;
+        }
+        #butm3{
+            color: white;
+            background-color: yellow;
+        }
+        #butr1{
+            color: white;
+            background-color: red;
+        }
+        #butr2{
+            color: white;
+            background-color: green;
+        }
+        #butr3{
+            color: white;
+            background-color: yellow;
+        }
+
+        .colorsleft{
+            float: left;
+            width: 33%;
+
+        }
+        .colorsmiddle{
+            float:left;
+            width: 33%;
+            text-align: center;
+        }
+        .colorsright{
+            float: right;
+            width: 30%;
+            text-align: right;
+        }
+
+        #grad1 {
+            height: 400px;
+            background-image: linear-gradient(to right, red, green, yellow);
+        }
+    </style>
+</head>
+<body>
+    <h3>Linear Gradient</h3>
+    <p></p>
+
+    <div id="grad1"></div>
+    <div class="colorsleft">
+        <button id="butl1" class="buttons" onclick="setColor1('red')">color left</button>
+        <button id="butl2" class="buttons" onclick="setColor1('green')">color left</button>
+        <button id="butl3" class="buttons" onclick="setColor1('yellow')">color left</button>
+    </div>
+    <div class="colorsmiddle">
+        <button id="butm1" class="buttons" onclick="setColor2('red')">color middle</button>
+        <button id="butm2" class="buttons" onclick="setColor2('green')">color middle</button>
+        <button id="butm3" class="buttons" onclick="setColor2('yellow')">color middle</button>
+    </div>
+    <div class="colorsright">
+        <button id="butr1" class="buttons" onclick="setColor3('red')">color right</button>
+        <button id="butr2" class="buttons" onclick="setColor3('green')">color right</button>
+        <button id="butr3" class="buttons" onclick="setColor3('yellow')">color right</button>
+    </div>
+
+    <script type="text/javascript">
+        var colour1 = 'red';
+        var colour2 = 'green';
+        var colour3 = 'yellow';
+
+        function setColor1(color){
+            colour1 = color;
+            setGradient();
+        }
+        function setColor2(color){
+            colour2 = color;
+            setGradient();
+        }
+        function setColor3(color){
+            colour3 = color;
+            setGradient();
+        }
+
+        function setGradient(){
+            gradient = "linear-gradient(to right, " + colour1 + ", " + colour2 + ", " + colour3 + ")";
+            document.getElementById("grad1").style.backgroundImage = gradient;
+        }
+
+    </script>
+</body>
+</html>
